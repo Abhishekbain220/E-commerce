@@ -1,0 +1,20 @@
+<%-include("./partials/header")%>
+<div class=" flex h-full  absolute justify-center gap-10 pl-[5vh] pb-[5vh] pt-[25vh] w-full ">
+  <div class="h-[400px] w-[30%] ">
+    <img class="w-[100%] rounded-[10px] object-cover h-[100%] " src="/images/<%=bill.product.productImage%>" alt="">
+  </div>
+  <div class="h-[400px] text-2xl text-white font-semibold w-[30%] pl-[5vh]  ">
+    <h1 class="font-bold mb-5 -mt-5 text-3xl">Billing Information</h1>
+    <h3 class="mb-3  w-[100%] flex justify-between"><span class="  font-bold ml-[2vh] ">User Name:- </span><%=user.username%></h3>
+    <h3 class="mb-3 flex justify-between"><span class="  font-bold ml-[2vh] ">User Address:- </span><%=user.address%></h3>
+    <h3 class="mb-3 flex justify-between"><span class="  font-bold ml-[2vh] ">Product Name:- </span><%=bill.product.title%></h3>
+    <h3 class="mb-3 flex justify-between"><span class="  font-bold ml-[2vh] ">Product Price:- </span><%=bill.product.price%></h3>
+    
+    <h3 class="mb-3 flex justify-between"><span class="  font-bold ml-[2vh] ">Product Quantity:- </span><%=bill.quantity%></h3>
+    <h3 class="mb-3 flex justify-between"><span class="  font-bold ml-[2vh] ">Total Amount:- </span> ₹ <%=bill.productPrice%></h3>
+    <a class=" pt-3  pl-[1.5vmax] pr-[1.5vmax] pb-3 text-white bg-[#18181B]    border-white border-[1px] hover:bg-white hover:border-white hover:text-black   absolute top-[70%] left-[56%]  rounded-[10px]   font-semibold" href="/profile/thanks">Buy Product</a>
+  </div>
+</div>
+  
+  
+<%-include("./partials/footer")%>

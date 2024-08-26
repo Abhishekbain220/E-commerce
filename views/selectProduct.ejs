@@ -1,0 +1,16 @@
+<%-include("./partials/header")%>
+  <div class=" flex h-full  absolute justify-center gap-10 pl-[5vh] pb-[5vh] pt-[25vh] w-full ">
+    <div class="  h-[400px] w-[30%]  ">
+      <img class="w-[100%] rounded-[10px] object-cover h-[100%] " src="/images/<%=product.productImage%>" alt="">
+    </div>
+    <div class="h-[400px] text-white  text-2xl font-semibold w-[30%] pl-[5vh]  ">
+      <h1 class="  flex justify-between mt-[25%]"><span class="font-bold">Product Name :-</span> <%=product.title%></h1>
+    <h1 class=" flex justify-between mt-5"> <span class="font-bold">Product Price :- </span>  ₹ <%=product.price%></h1>
+    <a class="  pt-3  pl-[1.5vmax] bg-green-600 pr-[1.5vmax] pb-3 text-white       hover:bg-white hover:border-white hover:text-green-700 absolute top-[60%]  rounded-[10px] text-2xl  font-semibold" href="/buyProduct/<%=product._id%>">Place Order</a>
+    <a class=" pt-3  pl-[1.5vmax] pr-[1.5vmax] pb-3 text-white bg-[#18181B]    border-white border-[1px] hover:bg-white hover:border-white hover:text-black   absolute top-[60%] left-[67.5%]  rounded-[10px]   font-semibold" href="/addToCart/<%=product._id%>">Add To Cart</a>
+    </div>
+  </div>
+
+  
+  
+<%-include("./partials/footer")%>

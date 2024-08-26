@@ -1,0 +1,33 @@
+<%-include("./partials/header")%>
+
+  <div class="flex justify-center   absolute top-[15%] items-center h-[85%] pt-[2.5%]  w-full ">
+    <div class="h-[100%] w-[600px]  pl-[2vh] pr-[2vh]  rounded-[10px] pt-2   ">
+      <div class=" scroll h-[80%] overflow-y-auto w-full mb-3    ">
+        <%products.forEach((elem)=>{%>
+          <div
+            class=" updateUserForm h-[200px] mb-5 pr-2  text-white flex w-[100%] items-center     rounded-[10px]  ">
+            <img src="/images/<%=elem.productImage%>" class="h-[180px] rounded-[10px] w-[200px] ml-2 object-cover" alt="">
+            <div class="text-2xl pl-[2vh] flex flex-col h-[200px] w-full justify-center  font-semibold">
+              <h2 class="flex justify-between"><span class="font-bold">Product Name:- </span>
+                <%=elem.title%>
+              </h2>
+              <h2 class="flex justify-between"><span class="font-bold">Product Price:- </span> ₹ <%=elem.price%>
+              </h2>
+            </div>
+  
+          </div>
+          <%})%>
+      </div>
+          <h1 class="  flex justify-between   items-center border-black  text-2xl font-semibold h-[8%] rounded-[10px] text-white w-full pl-5 pr-5"><span class="font-bold">Total Price: </span>
+            ₹ <%=totalPrice%>
+          </h1>
+          <%if(totalPrice == 0){%>
+            <a class=" mt-2  flex justify-center items-center  bg-[#18181B] text-white text-2xl font-semibold h-[8%] hover:bg-white hover:text-black  rounded-[10px] w-full pl-5" href="/addToCart">Buy Product</a>
+          <%}else{%>
+            <a class=" mt-2  flex justify-center items-center  bg-[#18181B] text-white text-2xl font-semibold h-[8%] hover:bg-white hover:text-black  rounded-[10px] w-full pl-5" href="/profile/payment">Buy Product</a>
+          <%}%>
+    </div>
+  </div>
+
+
+  <%-include("./partials/footer")%>

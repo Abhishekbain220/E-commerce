@@ -1,0 +1,16 @@
+<%-include("./partials/header")%>
+  
+  <div class=" scroll w-[95%] h-[85%] absolute  top-[15%] overflow-y-auto">
+    <div class="   w-[95%] mb-10 flex-wrap flex gap-10 pt-[8vh] pl-[5vh] ml-[5vh] ">
+      <%product.forEach((elem)=>{%>
+        <div class="  products text-white relative h-[350px] w-[300px] rounded-[10px] p-5 ">
+          <img class="h-[75%] rounded-[10px] w-full object-cover" src="/images/<%=elem.productImage%>" class="h-[200px] w-[200px] object-cover" alt="">
+          <h1 class="text-2xl font-semibold justify-center h-[15%]  flex items-center"><%=elem.title%></h1>
+        <a class=" font-semibold text-red-600 text-xl absolute bottom-1 right-[2vh]" href="/myProduct/deleteProduct/<%=elem._id%>">Delete</a>
+        <a class="text-xl absolute bottom-1 text-white left-[2vh] font-semibold" href="/myProduct/updateProduct/<%=elem._id%>">Update</a>
+        </div>
+      <%})%>
+    </div>
+  </div>
+  
+<%-include("./partials/footer")%>

@@ -1,0 +1,17 @@
+<%-include("./partials/header")%>
+  <div class=" updateUserForm rounded-[20px] w-[500px] h-[80%]  absolute left-[50%] top-[15%] -translate-x-[50%] pt-2 pl-2 pr-2 ">
+    <h1 class="h-[10%] rounded-[10px]   text-white flex font-semibold justify-center items-center text-3xl mb-2 w-[100%]">Create Product </h1>
+  <form class="pt-5 h-[90%]  flex flex-col items-center   " action="/profile/createProduct" method="post" enctype="multipart/form-data">
+    <input class="  border-black   h-[8%] mb-8 rounded-[10px] w-[80%] pl-5" type="text" name="title" placeholder="Enter product Title" id="">
+    <h1 class=" ImageButton border-black   h-[8%] mb-8 rounded-[10px] w-[80%]  text-white border-white border-[2px] flex items-center justify-center hover:text-black hover:bg-white cursor-pointer font-semibold text-center">Select Product Image</h1>
+    <input class=" ImageInput  border-black hidden  h-[8%] mb-8 rounded-[10px] w-[80%] pl-5" type="file" name="productImage" id="">
+    <input class="  border-black   h-[8%] mb-8 rounded-[10px] w-[80%] pl-5" type="number" name="price"  placeholder="Enter Price">
+    <button class=" pt-3  pl-[2.5vmax] pr-[2.5vmax] pb-3 text-white    border-white border-[1px] hover:bg-white hover:border-white hover:text-black   mt-10 rounded-[10px]   font-semibold">Create product </button>
+  </form>
+  </div>
+  <script>
+    document.querySelector(".ImageButton").addEventListener("click",()=>{
+      document.querySelector(".ImageInput").click()
+    })
+  </script>
+<%-include("./partials/footer")%>

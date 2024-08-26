@@ -1,0 +1,13 @@
+<%-include("./partials/header")%>
+  
+
+  <div class="scroll h-[85%]   absolute top-[15%] w-[95%] mb-10 flex-wrap overflow-y-auto flex gap-10 pt-[8vh] pl-[5vh] ml-[5vh] ">
+    <%product.forEach((elem)=>{%>
+      <a class="products h-[330px] w-[300px] rounded-[10px] p-5 " href="/profile/selectProduct/<%=elem._id%>">
+        <img src="/images/<%=elem.productImage%>" class="h-[85%] rounded-[10px] w-full object-cover" alt="">
+        <h1 class="text-2xl font-semibold justify-center h-[15%]  flex items-center"><%=elem.title%></h1>
+      </a>
+    <%})%>
+  </div>
+  
+<%-include("./partials/footer")%>

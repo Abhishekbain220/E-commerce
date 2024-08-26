@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-300  overflow-y-hidden" >
+  <div class=" overlay absolute h-[100%] w-[100%]  "></div>
+  <div class="h-[15%] w-[100%] absolute">
+    <div class=" navbar h-[100%] w-[100%] text-white   flex justify-between pl-[5vh] pr-[5vh] items-center text-4xl">
+      <h1 class=" w-[40%] font-bold">E-Store</h1>
+      <nav class=" w-[100%]  flex   justify-end pr-[2vh]  items-top  gap-10 text-[1.4vmax] font-semibold ">
+        <%if(user && user.role=="seller" ){%>
+          <a href="/profile/createProduct">Create Product</a>
+          <a href="/myProduct">My Product</a>
+          <a href="/profile">Products</a>
+          <a href="/profile/updateUser">Update User</a>
+          <%}else if(user && user.role=="buyer" ){%>
+            <a class=" cart text-3xl" href="/addToCart"><i class="ri-shopping-cart-2-line"></i></a>
+            <div class="h-[20px] flex justify-center items-center p-3 rounded-full top-[25%] w-[20px] bg-red-600 text-white absolute left-[56%]">
+              <h1 class="text-xl "><%=user.cart.length%></h1>
+            </div>
+            <a href="/profile/updateUser/">Update User</a>
+            <a href="/profile">Products</a>
+    
+            <%}else{%>
+    
+              <a href="/">Home</a>
+            <%}%>
+              <a href="/user/register">Register</a>
+              <a href="/user/login">Login</a>
+              <a href="/user/logout">Logout</a>
+      </nav>
+    </div>
+  </div>
+  

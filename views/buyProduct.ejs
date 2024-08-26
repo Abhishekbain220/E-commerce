@@ -1,0 +1,21 @@
+<%-include("./partials/header")%>
+
+<div class=" flex h-full  absolute justify-center gap-10 pl-[5vh] pb-[5vh] pt-[25vh] w-full ">
+  <div class="h-[400px] w-[30%] ">
+    <img class="w-[100%] rounded-[10px] object-cover h-[100%] " src="/images/<%=product.productImage%>" alt="">
+  </div>
+  <div class="h-[400px]  text-2xl  font-semibold w-[30%] pl-[5vh]  ">
+    <form action="/buyProduct/<%=mid%>" method="post">
+      <input class="  border-black border-[2px] bg-white text-black   h-[8%] mt-[30%] ml-[5%] pt-2 pb-2   rounded-[10px] w-[80%] pl-5" type="number" name="quantity"  placeholder="Enter Quantity">
+  
+      
+      <button class=" pt-3  pl-[2.5vmax] pr-[2.5vmax] pb-3 text-white bg-[#18181B]    border-white border-[1px] hover:bg-white hover:border-white hover:text-black  mt-[20%] ml-[25%]  rounded-[10px]   font-semibold" >Submit</button>
+    </form>
+  </div>
+</div>
+  
+  
+
+  
+  
+<%-include("./partials/footer")%>
